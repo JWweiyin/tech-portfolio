@@ -1,0 +1,61 @@
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+  transition: 0.3s;
+  border-radius: 10px;
+  background-color: snow;
+  padding: 15px 15px 15px 15px;
+  border: solid purple 3px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border: solid rgb(170, 17, 170) 3px;
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 100%;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+h4 {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+p.info {
+  text-align: start;
+  font-size: 25px;
+}
+
+p.link {
+  font-size: smaller;
+  text-decoration: underline;
+  text-align: center;
+}
+.container {
+  margin-top: 5%;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+}

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&display=swap");
+
+.container {
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 5%;
+}
+
+.bigbar {
+  width: 100%;
+  height: 50px;
+  background-color: dimgray;
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+
+p.label {
+  text-align: left;
+  margin-left: 3%;
+  font-weight: bold;
+  font-size: 30px;
+  font-family: "Baloo Bhaijaan 2", cursive;
+  vertical-align: center;
+  margin-bottom: 5%;
+}
+
+.bar {
+  height: 40px;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+.bar#java {
+  width: 80%;
+  background-color: salmon;
+}
+
+.bar#java p {
+  transition: color 0.5s;
+}
+
+.bar#java p:hover {
+  color: white;
+}
+
+.bar#html {
+  width: 70%;
+  background-color: orange;
+}
+
+.bar#html p {
+  transition: color 0.5s;
+}
+
+.bar#html p:hover {
+  color: white;
+}
+
+.bar#css {
+  width: 70%;
+  background-color: gold;
+}
+
+.bar#css p {
+  transition: color 0.5s;
+}
+
+.bar#css p:hover {
+  color: white;
+}
+
+.bar#cplusplus {
+  width: 60%;
+  background-color: lightgreen;
+}
+
+.bar#cplusplus p {
+  transition: color 0.5s;
+}
+
+.bar#cplusplus p:hover {
+  color: white;
+}
+
+.bar#angular {
+  width: 50%;
+  background-color: paleturquoise;
+}
+
+.bar#angular p {
+  transition: color 0.5s;
+}
+
+.bar#angular p:hover {
+  color: white;
+}
+
+.bar#javascript {
+  width: 40%;
+  background-color: lightskyblue;
+}
+
+.bar#javascript p {
+  transition: color 0.5s;
+}
+
+.bar#javascript p:hover {
+  color: white;
+}
+
+.bar#unity {
+  width: 25%;
+  background-color: plum;
+}
+
+.bar#unity p {
+  transition: color 0.5s;
+}
+
+.bar#unity p:hover {
+  color: white;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.content {
+  background-color: snow;
+  display: none;
+}

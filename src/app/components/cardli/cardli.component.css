@@ -1,0 +1,105 @@
+video {
+  width: 75%;
+  height: 500px;
+  border: 3px solid purple;
+  border-radius: 5px;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
+body {
+  line-height: 250%;
+}
+
+.container {
+  margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+h1 {
+  font-weight: bold;
+  text-align: center;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h4 {
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+  text-align: justify;
+}
+
+ol {
+  line-height: 200%;
+}
+
+ul {
+  line-height: 200%;
+}
+
+li {
+  font-size: 18px;
+}
+
+strong {
+  font-size: larger;
+}
+
+.header {
+  font-size: larger;
+}
+
+.subheader {
+  margin-left: 5%;
+}
+
+.subsubheader {
+  margin-left: 10%;
+}
+
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding-top: 20px;
+  padding-left: 22px;
+  text-decoration: none;
+  display: flex;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5%;
+  width: 230px;
+  height: 65px;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #28852c; /* Green */
+}
+
+.button-text {
+  font-size: 20px;
+  line-height: 80px;
+  display: inline-flex;
+}
+
+#git-button {
+  text-decoration: none;
+}
+
+#logo {
+  max-width: 50%;
+}

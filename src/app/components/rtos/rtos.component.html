@@ -1,0 +1,127 @@
+<div class="container">
+  <h1 id="RTOS">RTOS Remote Controlled Car</h1>
+  <br />
+  <h2>Table of Contents</h2>
+  <br />
+  <ul>
+    <li class="header">
+      <p><a href="/rtos#works">How it Works</a></p>
+    </li>
+    <li class="subheader">
+      <p><a href="/rtos#message">Message Sharing</a></p>
+    </li>
+    <li class="subheader">
+      <p><a href="/rtos#scheduling">Task Scheduling</a></p>
+    </li>
+    <li class="header">
+      <p><a href="/rtos#learning"> Learning Points</a></p>
+    </li>
+    <li class="header">
+      <p><a href="/rtos#video">Showcase Video</a></p>
+    </li>
+  </ul>
+  <br />
+  <h2 id="works">How it Works</h2>
+  <br />
+  <p>
+    For a remote controlled car to operate responsively, the computer is
+    required to execute commands within a critically defined time constraint.
+    Using a multithreaded system built on freeRTOS, the computer handles each
+    task separately with the help of an in-built scheduler. Hence, the remote
+    controlled car is able to move in the direction requested via a remote
+    control app, play music and flash LEDs in a running sequence seamlessly.
+    <br />
+    <br />
+    My contributions to this team project were:
+  </p>
+  <ul>
+    <li>Programmer for lighting sequence of LED component</li>
+    <li>Programmer for PWM signals sent to buzzer for it to play music</li>
+  </ul>
+  <br />
+  <h3 id="message">Message Sharing</h3>
+  <br />
+  <p>
+    How the remote controlled car processes and executes its commands is as
+    follows:
+  </p>
+  <ol>
+    <li>
+      When an interface button is pressed on the remote control app, the index
+      of the webpage corresponding to the button is sent to the ESP32 Arduino
+      (wifi module) of the remote controlled car.
+    </li>
+    <li>
+      The ESP32 Arduino receives the index of the webpage, and sends the
+      corresponding serial data to the freedom board via UART.
+    </li>
+    <li>
+      When the freedom board receives incoming data, an interrupt triggers. When
+      the message is fully received, the data is sent to a brain thread via a
+      message queue.
+    </li>
+    <li>
+      The brain thread receives the message from the UART interrupt request, and
+      sends the message to the other threads via another message queue.
+    </li>
+    <li>
+      Finally, each thread calls its own functions that send signals to their
+      respective components.
+    </li>
+  </ol>
+  <p>See the animation of this process here:</p>
+  <video controls>
+    <source src="../../../assets/Messaging.mp4" type="video/mp4" />
+  </video>
+  <br />
+  <br />
+  <h3 id="scheduling">Task Scheduling</h3>
+  <br />
+  <p>The process of scheduling tasks occurs as follows:</p>
+  <ol>
+    <li>
+      A task is initialised when it is created in the main function and the
+      multithreaded environment is activated. Each task requires a message from
+      the brain thread to run the code within it, so before it receives the
+      message it is in the blocked state.
+    </li>
+    <li>
+      When the brain thread sends a message to the task thread, the condition
+      for the task to run has been fulfilled. The task now moves into the ready
+      state.
+    </li>
+    <li>When the schedule calls the task, it runs.</li>
+    <li>
+      After it is finished running, the task returns to blocked state to wait
+      for another message from the brain thread that will allow it to run again.
+    </li>
+  </ol>
+  <p>See the animation of this process here:</p>
+  <video controls>
+    <source src="../../../assets/Scheduling.mp4" type="video/mp4" />
+  </video>
+  <br />
+  <br />
+  <h2 id="learning">Learning Points</h2>
+  <br />
+  <p>
+    This project allowed me to have the hands-on experience of soldering, and
+    now I can say that I am more confident about handling hardware connections
+    and components. The process of building the project was a stressful one and
+    definitely tested my perseverance, as issues with both hardware and software
+    hindered us from testing even the most basic movements of the car until the
+    final week of the project. Nonetheless, with long hours of debugging in the
+    final days before the project presentation, we were able to showcase a
+    working project that was able to fulfill many of the requirements of the
+    task.
+  </p>
+  <br />
+  <h2 id="video">Showcase Video</h2>
+  <br />
+  <video controls>
+    <source src="../../../assets/cg2271_video.mp4" type="video/mp4" />
+  </video>
+  <br />
+  <br />
+  <h4><a routerLink="/projects">Back to Projects</a></h4>
+</div>

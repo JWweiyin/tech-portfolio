@@ -1,0 +1,255 @@
+<div class="container">
+  <h1 id="title">
+    bitStory!: A visual novel and <br />
+    rhythm game experience
+  </h1>
+  <br />
+  <div>
+    <a href="https://github.com/JWweiyin/orbital2412" id="git-button">
+      <button>
+        <p>
+          <fa-icon [icon]="faGithub" size="lg" display="inline-flex"></fa-icon>
+          <span class="button-text">&nbsp;See on Github</span>
+        </p>
+      </button>
+    </a>
+  </div>
+  <br />
+  <br />
+  <h2>Table of Contents</h2>
+  <br />
+  <ul class="contents">
+    <li class="header">
+      <p>
+        <a href="/bitstory#about">About <em>bitStory!</em></a>
+      </p>
+    </li>
+    <li class="header">
+      <p><a href="/bitstory#dev">Development Process</a></p>
+    </li>
+    <li class="subheader">
+      <p><a href="/bitstory#mile1">Milestone 1</a></p>
+    </li>
+    <li class="subheader">
+      <p><a href="/bitstory#mile2">Milestone 2</a></p>
+    </li>
+    <li class="subheader">
+      <p><a href="/bitstory#mile3">Milestone 3</a></p>
+    </li>
+    <li class="subsubheader">
+      <p><a href="/bitstory#testing">User Testing</a></p>
+    </li>
+    <li class="subsubheader">
+      <p><a href="/bitstory#bugs">Bugs Squashed</a></p>
+    </li>
+    <li class="subsubheader">
+      <p><a href="/bitstory#problems">Problems Encountered</a></p>
+    </li>
+    <li class="header">
+      <p><a href="/bitstory#learning">Learning Points</a></p>
+    </li>
+  </ul>
+  <br />
+  <h2 id="about">About <em>bitStory!</em></h2>
+  <br />
+  <p>
+    Rhythm games usually tend to be arcade-style and rarely story-based. Because
+    of this, players are inclined to not be very emotionally invested in the
+    game and lose interest quickly. Hence we have created a game with mix of
+    rhythm game and visual novel elements to get players to be invested in our
+    game and will therefore be motivated to continue playing such games.
+    <br />
+    <br />
+    Most games of the visual novel genre are not very engaging in terms of
+    gameplay, mainly consisting of clicking the same button to advance dialogue.
+    By adding in elements of rhythm games, a skill-based gentre, we made a game
+    with visual novel elements that is engaging and interactive for the player.
+    <br />
+    <br />
+    My contributions to this team project were:
+  </p>
+  <ul>
+    <li>
+      Composition of music for rhythm game levels, level design for rhythm game
+      and programmer for rhythm game
+    </li>
+    <li>Programmer for user interface and menus</li>
+  </ul>
+  <br />
+  <br />
+  <h2 id="dev">Development Process</h2>
+  <br />
+  <p>The game was developed in three iterative stages, or milestones.</p>
+  <br />
+  <h3 id="mile1">Milestone 1</h3>
+  <br />
+  <p>Milestone 1 featured:</p>
+  <ul>
+    <li>
+      One rhythm game level with the scoring and combo systems implemented.
+    </li>
+  </ul>
+  <br />
+  <p>View the showcase video below:</p>
+  <video controls>
+    <source src="../../../assets/2412 Milestone 1 Showcase.mp4" />
+  </video>
+  <br />
+  <br />
+  <h3 id="mile2">Milestone 2</h3>
+  <br />
+  <p>Milestone 2 featured:</p>
+  <ul>
+    <li>
+      A main menu that allowed the user to choose between Story Mode (the main
+      game mode, consisting of alternating visual novel and rhythm game
+      segments) and Arcade Mode (a 'bite-sized mode' allowing the player to play
+      already cleared levels), or quit the game.
+    </li>
+    <li>
+      A Story Mode with a visual novel prologue, and one rhythm game level.
+    </li>
+    <li>
+      An Arcade Mode with five rhythm game levels for the user to choose from.
+    </li>
+    <li>Results screens upon the conclusion of each rhythm game level.</li>
+  </ul>
+  <br />
+  <p>
+    Feedback was obtained from one test player and the criticism was as follows:
+  </p>
+  <ul>
+    <li>
+      Inputs for the rhythm game were occasionally unresponsive. This was later
+      discovered to be an error in the code for the beatmap component, and was
+      amended in the next milestone.
+    </li>
+    <li>
+      The camera angle and perspective of the rhythm game segment may have made
+      it difficult for the user to see where the falling notes overlapped with
+      the buttons. We solved this issue with a design overhaul of the level
+      layout in the next milestone.
+    </li>
+  </ul>
+  <br />
+  <p>View the showcase video below:</p>
+  <video controls>
+    <source src="../../../assets/2412 Milestone 2 Showcase.mp4" />
+  </video>
+
+  <br />
+  <br />
+  <h3 id="mile3">Milestone 3</h3>
+  <br />
+  <p>Milestone 3 featured:</p>
+  <ul>
+    <li>
+      A level design overhaul, where the size of the buttons were reduced.
+    </li>
+    <li>
+      A fully fledged Story Mode, which incorporated a full plotline and eight
+      rhythm game levels.
+    </li>
+    <li>
+      Implementation of a Pass/Fail system for rhythm game levels. Upon scoring
+      more than 700000 points for a rhythm game level, the user would have been
+      deemed to have passed the level and the level would be available in arcade
+      mode. Otherwise, the level would not be available in arcade mode.
+    </li>
+    <li>
+      Implementation of an automatic save system for story mode, where the
+      player would be able to continue their gameplay from the game segment they
+      last ended their play session on.
+    </li>
+    <li>Pause screens for visual novel and rhythm game segments.</li>
+    <li>
+      An options menu with a volume slider for music and keybinding options.
+    </li>
+    <li>
+      An achievements page where high scores for rhythm game levels could be
+      viewed.
+    </li>
+    <li>A tutorial screen for the visual novel segment.</li>
+  </ul>
+  <br />
+  <p id="testing"><strong>User Testing</strong></p>
+  <p>
+    The
+    <a href="https://github.com/JWweiyin/orbital2412">Github repository link</a
+    >, as well as a
+    <a
+      href="https://docs.google.com/spreadsheets/d/1v8Yf6e49UaWBI4H6CB0P3FAbsQ_NkkRU-E-KvqKE8M0/edit?usp=sharing"
+      >feedback form</a
+    >, were sent to a handful of volunteers to gather feedback.
+    <br />
+    There were a number of aspects which we received feedback on, but did not
+    have the time to adjust in game.
+    <br />
+    <br />
+    These aspects were:
+  </p>
+  <ol>
+    <li>
+      Smoother transitions between the visual novel and rhythm game segments.
+    </li>
+    <li>
+      Allowing story progression after failing a level a certain number of
+      times.
+    </li>
+    <li>Lighting was not consistent across all the rhythm game levels.</li>
+  </ol>
+  <br />
+  <p id="bugs"><strong>Bugs Squashed</strong></p>
+  <ol>
+    <li>
+      Developer and user testing uncovered an error in which when the game was
+      first played, all the buttons in the rhythm game segment were mapped to a
+      single key. This was identified to be an initialization error in the
+      keybinding system, which was amended to fix the issue.
+    </li>
+    <li>
+      User testing uncovered an error in which when the log showing previous
+      dialogue was opened during the visual novel segment, it would remain there
+      even during the rhythm game. This was identified to be a scripting error
+      where the log and other visual novel UI components were not deactivated
+      before loading a rhythm game segment screen. The code was amended to fix
+      the issue.
+    </li>
+    <li>
+      User testing uncovered an error in which after restarting a rhythm game
+      segment, the game was paused. This was a scripting error in which the
+      method to resume the game was not called in the reload method. The code
+      was amended to fix the issue.
+    </li>
+  </ol>
+  <br />
+  <p id="problems"><strong>Problems Encountered</strong></p>
+  <ul>
+    <li>
+      User testing uncovered that the visuals/audio of the rhythm game were
+      occasionally laggy, though such delays could arise from the computer not
+      having sufficient memory to run the game smoothly if other programs were
+      run at the same time. This was beyond our control to fix, though it would
+      be recommended to close most programs while running the game.
+    </li>
+  </ul>
+  <p>View the showcase video below:</p>
+  <video controls>
+    <source src="../../../assets/2412 Milestone 3 Showcase.mp4" />
+  </video>
+  <br />
+  <br />
+  <h2 id="learning">Learning Points</h2>
+  <br />
+  <p>
+    This being my first attempt at a software engineering project, many aspects
+    could be better streamlined. Many code sections had functional overlaps
+    which made debugging a more complicated process than it should have been.
+    Now with better understanding of software engineering principles and
+    software design patterns, I understand how the different classes within the
+    architecture could have been better organised, and will keep that in mind
+    for the next time I embark on such a project.
+  </p>
+  <br />
+  <h4><a routerLink="/projects">Back to Projects</a></h4>
+</div>
